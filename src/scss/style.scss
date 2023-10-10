@@ -1,0 +1,109 @@
+$primary-text-color: #000000;
+$secondary-text-color: #c0392b;
+
+@import url("https://fonts.cdnfonts.com/css/bebas-neue");
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.nav-item {
+    @include media-breakpoint-down(lg) {
+        border-bottom: 1px solid rgb(231, 231, 231);
+    }
+    &:nth-of-type(4) {
+        @include media-breakpoint-down(lg) {
+            border: none;
+        }
+    }
+}
+
+.navbar {
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-text-color;
+    letter-spacing: 1px;
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: $secondary-text-color;
+    }
+}
+
+.navbar-toggler {
+    border: none;
+    background-image: url(../assets/icon_burger.png);
+    color: transparent;
+}
+
+#navbarSupportedContent {
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: 98%;
+    background-repeat: no-repeat;
+    transition: background-image 0.1s linear;
+
+    @include media-breakpoint-down(lg) {
+        width: 50px;
+        height: 50px;
+    }
+
+    &_search {
+        background-image: url(../assets/icon_search.png);
+        &-hovered {
+            background-image: url(../assets/icon_search-hovered.png);
+        }
+    }
+
+    &_vk {
+        background-image: url(../assets/icon_vk.png);
+
+        &-hovered {
+            background-image: url(../assets/icon_vk-hovered.png);
+        }
+    }
+    &_facebook {
+        background-image: url(../assets/icon_facebook.png);
+
+        &-hovered {
+            background-image: url(../assets/icon_facebook-hovered.png);
+        }
+    }
+    &_instagram {
+        background-image: url(../assets/icon_instagram.png);
+
+        &-hovered {
+            background-image: url(../assets/icon_instagram-hovered.png);
+        }
+    }
+
+    &_burger {
+        background-image: url(../assets/icon_burger.png);
+    }
+}
+
+.social-media {
+    margin-left: 30px;
+    margin-bottom: 0;
+    &__link {
+        width: 40px;
+        margin-left: 30px;
+    }
+}
