@@ -22,10 +22,12 @@ $secondary-text-color: #c0392b;
 }
 
 .navbar {
+    background-color: #ffffff;
     @include media-breakpoint-down(sm) {
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 999999;
     }
 }
 .nav-link {
@@ -34,7 +36,6 @@ $secondary-text-color: #c0392b;
     color: $primary-text-color;
     letter-spacing: 1px;
     transition: color 0.1s linear;
-
     &:hover {
         color: $secondary-text-color;
     }
@@ -105,5 +106,107 @@ $secondary-text-color: #c0392b;
     &__link {
         width: 40px;
         margin-left: 30px;
+    }
+}
+
+.carousel {
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        padding-top: 41px;
+    }
+    &__photo {
+        max-height: calc(100vh - 81px);
+        object-fit: cover;
+        z-index: -1;
+
+        @media (max-width: 1060px) {
+            min-height: calc(100vh - 82px);
+        }
+
+        @include media-breakpoint-up(sm) {
+            min-height: calc(100vh - 81px);
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        z-index: 100;
+        top: calc(100% - 100px);
+        left: calc(50% - 70px);
+        width: 140px;
+    }
+
+    &__button {
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: $primary-text-color;
+        background-color: #ffffff;
+        opacity: 1 !important;
+        transition:
+            color,
+            background-color 0.2s linear;
+
+        &:hover {
+            color: #ffffff !important;
+            background-color: $secondary-text-color;
+            opacity: 1;
+        }
+
+        &:focus {
+            color: $primary-text-color;
+        }
+    }
+}
+
+.header__text {
+    color: #ffffff;
+    letter-spacing: 5px;
+    position: absolute;
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 60px;
+    text-align: end;
+    right: 10%;
+    bottom: 50px;
+    text-shadow: 2px 2px 4px #000000;
+
+    @include media-breakpoint-down(lg) {
+        transform: scale(0.65);
+        right: -5%;
+        bottom: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        transform: scale(1);
+        font-size: 2rem;
+        line-height: 2rem;
+        letter-spacing: 3px;
+        bottom: 120px;
+        right: 5%;
+    }
+}
+
+.header__button {
+    color: $secondary-text-color;
+    background-color: #ffffff;
+    border: none;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 3.125rem;
+    border-radius: 10px;
+    transition: all 0.2s linear;
+
+    &:hover {
+        color: #ffffff;
+        background-color: $secondary-text-color;
+    }
+
+    @include media-breakpoint-down(sm) {
+        line-height: 2rem;
+        font-size: 1rem;
+        letter-spacing: 2px;
     }
 }
