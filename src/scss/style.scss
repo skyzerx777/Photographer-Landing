@@ -348,3 +348,124 @@ $primary: #c0392b;
         }
     }
 }
+
+.contacts {
+    &__link {
+        width: 100%;
+        font-size: 3rem;
+        line-height: 3rem;
+        border-radius: 10px;
+        border-width: 2px;
+        width: 200px;
+        max-height: 66px;
+        margin-right: 40px;
+
+        @include media-breakpoint-down(sm) {
+            margin-right: 15px;
+        }
+
+        &:nth-of-type(3) {
+            @include media-breakpoint-down(lg) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__form {
+        @include media-breakpoint-up(lg) {
+            padding-left: 60px;
+        }
+    }
+}
+
+.form {
+    &__header {
+        color: $primary;
+        letter-spacing: 5px;
+        font-weight: 700;
+        font-size: 3.5rem;
+        height: 3.5rem;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__label {
+        color: $primary;
+        font-size: 2rem;
+        letter-spacing: 3px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__input {
+        border: none;
+        border-bottom: 2px solid $primary;
+        width: 100%;
+        font-size: 3rem;
+        line-height: 3rem;
+        height: 70px;
+        outline: none;
+
+        @include media-breakpoint-down(lg) {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            height: 60px;
+        }
+    }
+
+    &__button {
+        &:hover {
+            color: #ffffff;
+            background-color: $primary;
+        }
+    }
+}
+
+.form__input:valid + .form__label {
+    transform: translateY(-50px);
+}
+
+.footer {
+    height: 150px;
+    background-image: url(../assets/footer__background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    &__text {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: #ffffff;
+        letter-spacing: 3px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        text-shadow: 2px 2px 4px #000000;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+            line-height: 1.rem;
+        }
+    }
+
+    &__subtext {
+        color: lightgray;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 5px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 1.25rem;
+            line-height: 1.25rem;
+        }
+    }
+}

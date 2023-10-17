@@ -47,7 +47,7 @@
                 <a class="nav-link text-uppercase" href="#services">Услуги</a>
               </li>
               <li class="nav-item text-center text-lg-start py-3 py-lg-0 px-2">
-                <a class="nav-link text-uppercase" href="#">Контакты</a>
+                <a class="nav-link text-uppercase" href="#contacts">Контакты</a>
               </li>
             </ul>
           </div>
@@ -461,5 +461,102 @@
         </div>
       </div>
     </section>
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <div
+          class="heading d-flex align-items-center justify-content-center py-3"
+        >
+          <embed src="../src/assets/lines.svg" />
+          <h2 class="heading__text text-uppercase d-inline m-0 px-3">
+            Контакты
+          </h2>
+          <embed src="../src/assets/lines.svg" class="rotated" />
+        </div>
+      </div>
+      <div
+        class="container-lg d-flex flex-column flex-lg-row justify-content-lg-between"
+      >
+        <div
+          class="col-12 col-lg-2 d-flex flex-lg-column justify-content-center justify-content-lg-start"
+        >
+          <a href="#" class="btn btn-outline-primary contacts__link mb-5">
+            <i class="fa-brands fa-vk"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            class="btn btn-outline-primary contacts__link mb-5"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            class="btn btn-outline-primary contacts__link mb-5"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+        <form class="contacts__form col-12 col-lg-10">
+          <div class="col-12 d-flex align-items-end mb-5">
+            <h2 class="form__header text-uppercase m-0">Обратная связь</h2>
+          </div>
+          <div
+            class="col-12 d-flex align-items-end mb-5 flex-column flex-lg-row"
+          >
+            <div
+              class="col-12 col-lg-4 position-relative me-0 me-lg-5 mb-5 mb-lg-0"
+            >
+              <input
+                required
+                id="name"
+                type="text"
+                class="form__input text-uppercase"
+              />
+              <label for="name" class="form__label text-uppercase">Имя</label>
+            </div>
+            <div class="col-12 col-lg position-relative">
+              <input
+                required
+                id="contact"
+                type="text"
+                class="form__input text-uppercase"
+              />
+              <label for="contact" class="form__label text-uppercase"
+                >Email/Номер телефона</label
+              >
+            </div>
+          </div>
+          <div class="col-12 d-flex align-items-end mb-5">
+            <div class="col position-relative">
+              <input
+                required
+                id="message"
+                type="text"
+                class="form__input text-uppercase"
+              />
+              <label for="message" class="form__label text-uppercase"
+                >Текст сообщения</label
+              >
+            </div>
+          </div>
+          <div
+            class="col d-flex justify-content-center justify-content-lg-end mb-5"
+          >
+            <button
+              type="submit"
+              class="btn btn-outline-primary button form__button"
+            >
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer
+      class="footer d-flex justify-content-center align-items-center flex-column"
+    >
+      <p class="footer__text text-uppercase">Photographer Stanislav Gubkin</p>
+      <p class="footer__text">2016</p>
+      <p class="footer__subtext text-uppercase">Сайт изготовлен командой KV Soft</p>
+    </footer>
   </body>
 </html>
