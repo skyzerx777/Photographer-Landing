@@ -400,6 +400,7 @@ $primary: #c0392b;
         position: absolute;
         bottom: 0;
         left: 0;
+        transition: all 0.1s linear;
 
         @include media-breakpoint-down(lg) {
             font-size: 1.5rem;
@@ -452,7 +453,7 @@ $primary: #c0392b;
 
         @include media-breakpoint-down(sm) {
             font-size: 1.5rem;
-            line-height: 1.rem;
+            line-height: 1.5rem;
         }
     }
 
